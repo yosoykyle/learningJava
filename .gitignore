@@ -1,0 +1,19 @@
+# Ignore compiled class files
+/bin/
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Ignore any log or temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore build tools
+/out/
+target/
+build/
