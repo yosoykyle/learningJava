@@ -3,14 +3,13 @@ package DAY1_71625;
 import java.util.Scanner;
 
 /**
- * This class calculates the area of a triangle using user input for the base and height.
+ * This class calculates the area of a triangle using user input for the base
+ * and height.
  */
 
- public class RectangleArea 
- {
-    public static void main(String[] args) 
-    {
-        //Scanner object to read user input
+public class RectangleArea {
+    public static void main(String[] args) {
+        // Scanner object to read user input
         Scanner scn = new Scanner(System.in);
 
         // Declaring variables
@@ -27,7 +26,7 @@ import java.util.Scanner;
         area = length * width;
         System.out.println("The area of the rectangle is: " + area + " cm²");
 
-        //scn.close();
+        // scn.close();
         scn.close();
     }
- }
+}

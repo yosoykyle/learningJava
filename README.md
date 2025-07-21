@@ -15,6 +15,6 @@ I'm following Bro Code's Java course on YouTube:
 ## Goals
 
 - Relearn and reinforce core Java concepts
-- Practice writing clean, working code daily
+- Practice writing clean, working code daily (🤞)
 - Build a solid foundation so I don’t have to rely too much on external resources too often
 - Refine my backend development skills and strengthen my Spring Boot projects

@@ -9,9 +9,10 @@ package DAY3_72025;
  */
 
 import java.util.Scanner;
+
 public class Cart {
     public static void main(String[] args) {
-        Scanner scn = new Scanner (System.in);
+        Scanner scn = new Scanner(System.in);
         // Variables to hold item details
         String itemName;
         double itemPrice;
@@ -23,7 +24,7 @@ public class Cart {
         System.out.println("This is a Shopping Cart program.");
         System.out.print("What item would you like to add to your cart?: ");
         itemName = scn.nextLine();
-       
+
         System.out.print("Enter the price of " + itemName + ": ");
         itemPrice = scn.nextDouble();
 
@@ -32,8 +33,8 @@ public class Cart {
 
         totalPrice = itemPrice * itemQuantity; // Calculate total price
 
-        System.out.println("\nTotal price for " + itemQuantity + " " + itemName + "(s): " + currencySymbol + totalPrice);
-
+        System.out
+                .println("\nTotal price for " + itemQuantity + " " + itemName + "(s): " + currencySymbol + totalPrice);
 
         scn.close();
     }
