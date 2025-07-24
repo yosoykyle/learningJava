@@ -1,5 +1,4 @@
 package DAY1_71625;
-
 public class Variables {
     public static void main(String[] args) {
         /*
@@ -29,9 +28,9 @@ public class Variables {
          * numbers as double by default.
          * - double: is used for double-precision floating-point numbers, useful for
          * larger decimal numbers like 3.14, 2.718
-         * - The difference between float and double is precision; double is more
-         * precise than float. Use double for more accuracy. Use float for less
-         * precision.
+         * - The difference between float and double is precision
+         * Use double for more accuracy.
+         * Use float for less precision.
          * - char: is a character type, useful for storing single characters like 'A',
          * 'B', 'C'
          * - boolean: is a type for true/false values and is used for logical operations
