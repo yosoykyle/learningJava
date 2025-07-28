@@ -12,6 +12,8 @@ package DAY5_72225;
  * - lastIndexOf(char/String)
  * - toLowerCase()
  * - toUpperCase()
+ * - isLowerCase(.charAt(int))
+ * - isUpperCase(.charAt(int))
  * - trim()
  * - replace(char, char) / replace(CharSequence, CharSequence) can be used to remove spaces or replace characters
  * - startsWith(String)
@@ -55,7 +57,8 @@ public class StringMethods {
         int lastIndex = name.lastIndexOf('y');
         System.out.printf("Last index of 'y' in the name: %d%n", lastIndex);
 
-        /*If you need to make the string lowercase, use toLowerCase().
+        /*
+         * If you need to make the string lowercase, use toLowerCase().
          * If you need to make it uppercase, use toUpperCase().
          * These ensure that the string is in the desired case.
          * * note that these methods do not change the original string,
@@ -65,7 +68,30 @@ public class StringMethods {
         String lower = name.toLowerCase();
         String upper = name.toUpperCase();
         System.out.printf("Lowercase name: %s%n", lower);
-        System.out.printf("Uppercase name: %s%n", upper); 
+        System.out.printf("Uppercase name: %s%n", upper);
+
+        /*
+         * If you need to check if a character is uppercase, use
+         * Character.isUpperCase().
+         * If you need to check if a character is lowercase, use
+         * Character.isLowerCase().
+         * These methods return a boolean indicating the case of the character.
+         * Useful for validating input (like names) or applying specific logic based on
+         * case.
+         * 
+         * Note: These methods work on characters, not full strings.
+         * To apply them to a string, use string.charAt(index) to access a specific
+         * character.
+         */
+        if (name.isEmpty()) {
+            System.out.println("You entered an empty string.");
+        } else if (Character.isUpperCase(name.charAt(0))) {
+            System.out.println("The first letter is uppercase.");
+        } else if (Character.isLowerCase(name.charAt(0))) {
+            System.out.println("The first letter is lowercase.");
+        } else {
+            System.out.println("The first character is not a letter.");
+        }
 
         /*
          * When you need to trim whitespace from the beginning and end of a string,
@@ -85,7 +111,6 @@ public class StringMethods {
          */
         String replaced = name.replace('K', 'J');
         System.out.printf("Replaced name: %s%n", replaced);
-
 
         // Prefix is
         /*
@@ -108,7 +133,8 @@ public class StringMethods {
          * To check if a string ends with a specific suffix,
          * use endsWith(suffix). It returns true if the string ends with the specified
          * suffix.
-         * This is useful for validating file extensions, URLs, or any string that should
+         * This is useful for validating file extensions, URLs, or any string that
+         * should
          * end with a certain sequence of characters.
          */
         boolean endsWith = name.endsWith("e"); // it uses "" and not '' because it is a string
@@ -126,12 +152,12 @@ public class StringMethods {
          * a specified number of times.
          * Use cases include creating visual separators, formatting output,
          * or generating repeated content in a string.
-        */
+         */
         String repeated = "=".repeat(10);
         System.out.printf("Repeated dash: %s%n", repeated);
 
         /*
-         *To check if the string contains a specific sequence of characters,
+         * To check if the string contains a specific sequence of characters,
          * use contains(CharSequence). It returns true if the string contains
          * the specified sequence.
          * This is useful for validating input, searching for keywords,
@@ -142,11 +168,11 @@ public class StringMethods {
 
         /*
          * If you need to check if two strings are equal,
-         * use equals(Object) for case-sensitive comparison.   
+         * use equals(Object) for case-sensitive comparison.
          * Use equalsIgnoreCase(String) for case-insensitive comparison.
          * This is useful for validating user input, comparing strings,
-         * or checking if two strings are identical. 
-        */
+         * or checking if two strings are identical.
+         */
         System.out.printf("name: '%s'%n", name);
         boolean equals = name.equals("  yle Baluyot  ");
         System.out.printf("Is the name equal to '  yle Baluyot  '?: %b%n", equals);
