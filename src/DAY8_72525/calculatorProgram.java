@@ -5,7 +5,7 @@ package DAY8_72525;
  * This is a practice project to get more familliar using enhanced switch statements.
  * 
  * This program will ask:
- * 1. Firt numer
+ * 1. First number
  * 2. The operator (+, -, *, /)
  * 3. Second number
  * 4. output the result of the operation
