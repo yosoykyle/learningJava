@@ -12,8 +12,8 @@ package DAY5_72225;
  * - lastIndexOf(char/String)
  * - toLowerCase()
  * - toUpperCase()
- * - isLowerCase(.charAt(int))
- * - isUpperCase(.charAt(int))
+ * - Character.isLowerCase(.charAt(index))
+ * - Character.isUpperCase(.charAt(index))
  * - trim()
  * - replace(char, char) / replace(CharSequence, CharSequence) can be used to remove spaces or replace characters
  * - startsWith(String)
@@ -72,9 +72,9 @@ public class StringMethods {
 
         /*
          * If you need to check if a character is uppercase, use
-         * Character.isUpperCase().
+         * Character.isUpperCase(index).
          * If you need to check if a character is lowercase, use
-         * Character.isLowerCase().
+         * Character.isLowerCase(index).
          * These methods return a boolean indicating the case of the character.
          * Useful for validating input (like names) or applying specific logic based on
          * case.
