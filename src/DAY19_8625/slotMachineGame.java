@@ -3,10 +3,20 @@ package DAY19_8625;
 /*
  * slotMachineGame.java
  * 
- * A practive project to get more familliar
- * 
+ * A practice project designed to improve familiarity with:
+ * - Java basics (loops, conditionals, arrays, methods)
+ * - User input validation using Scanner
+ * - Randomized outcomes using the Random class
+ * - Modularity through method decomposition
+ *
  * What it does:
-*/
+ * This is a simple slot machine game simulation where a player starts with a set balance
+ * and places bets to spin a virtual slot machine made of 3 random symbols.
+ * If certain combinations of symbols appear, the player receives a payout.
+ * After each win or loss, the player is asked whether they want to cash out or keep playing.
+ * When the balance is depleted, the user can choose to play again.
+ */
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -126,11 +136,21 @@ public class slotMachineGame {
 
     // GET PAYOUT
     static int getPayout(Scanner scn, String[] row, int bet) {
-        // CHECK FOR MATCHES
+
+        /*
+         * Instead of using a traditional switch-case block (which requires break
+         * statements),
+         * this uses Java’s modern `switch` expression with `->`, introduced in Java
+         * 14+.
+         * 
+         * This allows the switch to directly return a value, making the code shorter
+         * and clearer.
+         * Example: `return switch(symbol) { case "Key" -> bet * 3; ... }`
+         * 
+         * The payout multiplier is based on which symbol matched and how many matched.
+         * If no match is found, the method returns 0.
+         */
         if (row[0].equals(row[1]) && row[1].equals(row[2])) {
-            /*
-             * Explain how it works why it return the switch and not the case
-             */
             return switch (row[0]) {
                 case "Key" -> bet * 3;
                 case "Car" -> bet * 4;
@@ -158,6 +178,8 @@ public class slotMachineGame {
                 default -> 0;
             };
         }
+
+        // No matches found
         return 0;
     }
 
@@ -173,7 +195,7 @@ public class slotMachineGame {
             System.out.print(playAgainMes);
             if (scn.hasNextLine()) {
                 playAgain = scn.nextLine().toLowerCase().replace(" ", "");
-                if (playAgain.equals("yes" )|| playAgain.equals("y")) {
+                if (playAgain.equals("yes") || playAgain.equals("y")) {
                     again += 100;
                     return again;
                 } else if (playAgain.equals("no") || playAgain.equals("n")) {
@@ -190,7 +212,7 @@ public class slotMachineGame {
 
         System.out.print("Want to payout + " + balance + " (Y/N): ");
         yN = scn.nextLine().toUpperCase();
-        if (yN.equals("YES" )|| yN.equals("Y")) {
+        if (yN.equals("YES") || yN.equals("Y")) {
             return true;
         } else {
             return false;
