@@ -32,6 +32,7 @@ package DAY13_73125;
  *    - Declared with the `static` keyword.
  *    - Belong to the class itself (not tied to an object).
  *    - Shared by all instances of the class.
+ *    - src\DAY22_8925\oop5th\staticScope.java
  * 
  * When to Use Each:
  * -----------------
