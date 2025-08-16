@@ -2,67 +2,67 @@ package DAY28_81525.oop15th;
 
 /*
  * aggregation.java
- * These are parts they are not the same as inheritance.
- * they are independent objects that can exist on their own.
- * and is not a subclass of the other.
- * and are reusable in other classes.
  * 
- * Represents a "has-a" relationship between objects. 
- * One object CONTAINS another object as part of its structure, 
- * but the contained object/s can exist independently.
+ * This program demonstrates the concept of Aggregation in Object-Oriented Programming (OOP).
  * 
- * why do this?
- * - To model real-world relationships where one object is composed of other objects.
+ * Key Idea of Aggregation:
+ * - Aggregation represents a "HAS-A" relationship between classes.
+ * - One object contains references to another object as part of its structure.
+ * - Unlike inheritance, the contained objects (the "parts") are independent and can exist
+ *   without the container object.
  * 
- * how is this different from inheritance like extends and implements
- * Inheritance → "is-a" relationship "is-a" from subclass to superclass & interface
- * A subclass is a specialized form of its superclass.
- * Example: Dog is a Animal.
- * Aggregation → "has-a" relationship
- * One class contains another class as a field.
- * Example: Car has an Engine.
- * Inheritance → Used for extending behavior or sharing common code.
- * Aggregation → Used for building complex types from simpler ones by combining objects.
- * Inheritance: Subclass object is the superclass object; they share the same lifecycle.
- * Aggregation: Contained object can live on its own even if the container is destroyed. 
+ * Example in this program:
+ * - A Library "HAS-A" collection of Book objects.
+ * - Even if the Library object is destroyed, the Book objects can still exist independently.
  * 
- * General Design Order
+ * Difference from Inheritance:
+ * - Inheritance ("IS-A" relationship): a subclass is a specialized form of a superclass. 
+ *   Example: Dog IS-A Animal.
+ * - Aggregation ("HAS-A" relationship): a class contains another class as a field. 
+ *   Example: Car HAS-A Engine.
  * 
- * 
- * In this demonstration we will make book objects
- * library object to contain the object (One object CONTAINS another object but the contained object/s can exist independently)
- * books && library can exist independently
- * 
- * 
-*/
+ * Usage in software design:
+ * - Aggregation is used when modeling real-world entities composed of smaller, independent parts.
+ * - Inheritance is used when creating hierarchies where specialized classes share common behavior.
+ */
 public class aggregation {
     public static void main(String[] args) {
-        // Book objeects can exiist independently
+        // Create independent Book objects.
+        // Each Book can exist on its own, without requiring a Library.
         Book book1 = new Book("Harry Potter and the Sorcerer's Stone", 309);
         Book book2 = new Book("The Little Prince", 96);
         Book book3 = new Book("The Lord of the Rings", 1100);
-        // Library object can exiist independently
+
+        // Create a Library object.
+        // The Library can also exist independently without any books initially.
         Library library = new Library("National Library of the Philippines", 1889);
 
+        // Store the created Book objects in an array for easy grouping.
         Book[] books = new Book[3];
         books[0] = book1;
         books[1] = book2;
         books[2] = book3;
 
+        // Associate the array of Book objects with the Library object.
+        // This demonstrates aggregation: the Library contains Book objects,
+        // but those Book objects are not "owned" by the Library and can exist without it.
         library.setBooks(books);
 
+        // Display information about the Library (name and year established).
         library.displayLibraryInfo();
-        //System.out.println(library);
+
+        // Display all books in the Library by looping through its collection.
         System.out.println("\nBooks in the library:\n");
-        // Display all books in the library
         Book[] libraryBooks = library.getLibraryBooks();
         for (Book book : libraryBooks) {
-            System.out.println(book);
+            System.out.println(book); // Uses the Book class’s toString() method.
         }
+
+        // Display a specific book using its index in the collection.
         System.out.println();
-        // get specific book using index
         System.out.println(library.getLibraryBook(0));
 
+        // Display all books again using the Library's own display method.
         library.displayBooks();
     }
 }
