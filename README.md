@@ -9,8 +9,8 @@ Each folder reflects a day's worth of focused learning, with filenames represent
 
 ## Source
 
-I'm following Bro Code's Java course on YouTube:  
-🔗 [https://youtu.be/xTtL8E4LzTQ?si=ZwlVs0_AezcYO42p](https://youtu.be/xTtL8E4LzTQ?si=ZwlVs0_AezcYO42p)
+Bro Code's Java Full Course for free ☕ (2025) on YouTube:  
+🔗 [https://youtu.be/xTtL8E4LzTQ?si=ZwlVs0_AezcYO42p](https://youtu.be/xTtL8E4LzTQ?si=ZwlVs0_AezcYO42p) — Started at `DAY1_71625`, finished at `DAY41_82825`
 
 ## Goals
 
